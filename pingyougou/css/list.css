@@ -1,0 +1,163 @@
+.sk {
+    position: absolute;
+    top: 40px;
+    left: 185px;
+    height: 32px;
+    padding: 3px 0 0 14px;
+    border-left: 1px solid #b1191a;
+}
+
+.sk_list {
+    height: 45px;
+}
+
+.sk_list li {
+    float: left;
+    margin: 15px 28px 0;
+}
+
+.sk_list a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.sk_list a:hover {
+    color: #b1191a;
+}
+
+.sk_ico li {
+    float: left;
+    margin: 18px 22px 0;
+}
+
+.sk_ico a {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "icomoon";
+    color: #666666;
+}
+
+.sk_hd {
+    height: 120px;
+    margin-bottom: 25px;
+}
+
+.sk_goods {
+    position: relative;
+    width: 288px;
+    height: 458px;
+    border: 1px solid #e12228;
+}
+
+.sk_goods_title {
+    margin: 0 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.sk_goods_title h5 {
+    font-weight: normal;
+}
+
+.sk_goods_price {
+    margin: 15px 0 0 15px;
+}
+
+.sk_goods_price em {
+    font-size: 22px;
+    color: #e60012;
+}
+
+.sk_goods_price del {
+    font-size: 14px;
+    color: #a4a4a4;
+}
+
+.sk_goods_progress {
+    padding-left: 10px;
+}
+
+.bar {
+    display: inline-block;
+    width: 130px;
+    height: 10px;
+    margin: 0 10px;
+    border: 1px solid #e12228;
+    border-radius: 5px;
+}
+
+.bar_full {
+    width: 87%;
+    height: 100%;
+    background-color: #ed282e;
+}
+
+.sk_goods {
+    float: left;
+}
+
+.sk_goods_progress i {
+    font-size: 14px;
+    color: #666;
+}
+
+.sk_goods_buy {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    background-color: #b1191a;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* 给父级加 text-align: center 这个父级元素里的所有文字、行内块、行内元素都能居中对齐 */
+
+.page {
+    margin: 45px 0;
+    text-align: center;
+}
+
+.page_num a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+}
+
+.page_num .pg_prev,
+.page_num .pg_next {
+    width: 83px;
+}
+
+.page_num .current,
+.page_num .dotted {
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.page_skip input {
+    width: 46px;
+    height: 36px;
+    text-align: center;
+    border: 1px solid #ccc;
+    transition: all .5s;
+}
+
+.page_skip input:focus {
+    /* :focus  主要针对的是表单（获得焦点） */
+    width: 86px;
+    border: 1px solid skyblue;
+}
+
+.page_skip button {
+    width: 54px;
+    height: 36px;
+    border: 1px solid #ccc;
+}

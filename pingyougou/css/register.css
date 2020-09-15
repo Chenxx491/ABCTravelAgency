@@ -1,0 +1,135 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 66px;
+    margin-top: 20px;
+    border-bottom: 2px solid #b1191a;
+}
+
+.registerarea {
+    height: 520px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+.registerarea h3 {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px 0;
+    font-size: 18px;
+    font-weight: 400;
+    border-bottom: 1px solid #ccc;
+    background-color: #ececec;
+}
+
+.registerarea h3 em {
+    float: right;
+    font-size: 14px;
+}
+
+.registerarea em a {
+    color: #c81623;
+}
+
+.reg_form {
+    width: 600px;
+    height: 400px;
+    margin: 40px 300px;
+}
+
+.reg_form li {
+    margin-bottom: 20px;
+}
+
+.reg_form label {
+    display: inline-block;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #4c4c4c;
+    text-align: right;
+}
+
+.reg_form .inp {
+    width: 238px;
+    height: 34px;
+    border: 1px solid #ccc;
+}
+
+.error {
+    margin-left: 10px;
+    color: #df3033;
+}
+
+.error_icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    /* 让背景图和文字垂直居中对齐 */
+    vertical-align: middle;
+    background: url(../img/reg_error.png);
+}
+
+.safe {
+    padding-left: 180px;
+    color: #b2b2b2;
+}
+
+.safe em {
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    margin-left: 1px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.ruo {
+    background-color: #de1111;
+}
+
+.zhong {
+    background-color: #40b83f;
+}
+
+.qiang {
+    background-color: #f79100;
+}
+
+.pro {
+    margin-left: 122px;
+}
+
+.pro a {
+    color: #1ba1e6;
+}
+
+.btn_inp {
+    width: 200px;
+    height: 35px;
+    margin: 50px 0 0 120px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    background-color: #c81623;
+}
+
+.footer {
+    height: 120px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.reg_links {
+    height: 28px;
+}
+
+.reg_copyright {
+    line-height: 24px;
+}

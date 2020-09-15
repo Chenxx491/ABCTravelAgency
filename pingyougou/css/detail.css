@@ -1,0 +1,392 @@
+/* 面包屑导航 */
+
+.crumb_wrap {
+    margin: 20px 0 10px 0;
+}
+
+.crumb_wrap a {
+    margin: 0 10px;
+    font-size: 12px;
+}
+
+
+/* 产品预览 */
+
+.preview_wrap {
+    float: left;
+    width: 400px;
+}
+
+.preview_img {
+    width: 398px;
+    height: 398px;
+    line-height: 398px;
+    margin-bottom: 64px;
+    text-align: center;
+    border: 1px solid #ededed;
+}
+
+.preview_list {
+    position: relative;
+}
+
+.list_item {
+    width: 290px;
+    height: 58px;
+    margin: 0 36px;
+    padding: 0 20px;
+}
+
+.list_item li {
+    float: left;
+    width: 56px;
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+    border: 1px solid #c81623;
+}
+
+.btn_pre,
+.btn_next {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    width: 19px;
+    height: 33px;
+}
+
+.btn_pre {
+    left: 0;
+    background: url("../img/btn_pre.png");
+}
+
+.btn_next {
+    right: 0;
+    background: url("../img/btn_next.png");
+}
+
+
+/* 产品详细信息 */
+
+.itemInfo_wrap {
+    float: left;
+    margin-left: 0;
+}
+
+.sku_name {
+    height: 33px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.news {
+    height: 33px;
+    font-size: 12px;
+    color: #e12228;
+}
+
+.summary dt {
+    float: left;
+    margin-left: 10px;
+}
+
+.summary dd {
+    float: left;
+}
+
+.summary_price {
+    position: relative;
+    width: 650px;
+    height: 42px;
+    background-color: #fee9eb;
+}
+
+.summary_price dt,
+.summary_price dd i,
+.summary_price dd {
+    height: 42px;
+    line-height: 42px;
+}
+
+.summary_price dt {
+    font-size: 12px;
+    color: #666;
+}
+
+.summary_price dd {
+    margin-left: 20px;
+    font-size: 12px;
+    color: #c81623;
+}
+
+.summary_price dd i {
+    font-size: 24px;
+    color: #e12228;
+}
+
+.summary_price dd a {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.summary_promotion {
+    width: 650px;
+    height: 71px;
+    background-color: #fee9eb;
+}
+
+.summary_promotion dd {
+    width: 546px;
+    margin-left: 20px;
+    color: #999;
+}
+
+.summary_promotion dd a {
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    margin-right: 10px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    background-color: #c81623;
+}
+
+.summary_support {
+    height: 45px;
+    line-height: 45px;
+}
+
+.summary_support dd,
+.summary_stock dd {
+    margin-left: 20px;
+    color: #999;
+}
+
+.summary_stock {
+    width: 547px;
+    height: 54px;
+    border-bottom: 1px solid #ededed;
+}
+
+.summary_stock dd {
+    width: 386px;
+    height: 30px;
+}
+
+.summary_choose_color,
+.summary_choose_version,
+.summary_choose_capacity,
+.summary_buy_ways,
+.summary_suit {
+    height: 44px;
+    line-height: 44px;
+    margin-top: 15px;
+}
+
+.summary_choose_color dd,
+.summary_choose_version dd,
+.summary_choose_capacity dd,
+.summary_buy_ways dd,
+.summary_suit dd {
+    margin-left: 20px;
+}
+
+.summary_choose_color dd a,
+.summary_choose_version dd a,
+.summary_choose_capacity dd a,
+.summary_buy_ways dd a,
+.summary_suit dd a {
+    display: inline-block;
+    width: 82px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    background-color: #f7f7f7;
+    border: 1px solid #ededed;
+}
+
+.choose_btns {
+    width: 203px;
+    height: 46px;
+    margin: 20px 0 30px 0;
+}
+
+.choose_amount {
+    position: relative;
+    float: left;
+    width: 49px;
+    height: 46px;
+}
+
+.choose_amount input {
+    width: 33px;
+    height: 44px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.choose_amount button {
+    position: absolute;
+    width: 15px;
+    height: 23px;
+    border: 1px solid #ccc;
+}
+
+.choose_amount .btn_add {
+    top: 0;
+    right: 0;
+}
+
+.choose_amount .btn_reduce {
+    right: 0;
+    bottom: 0;
+    border-top: none;
+}
+
+.addshopcar {
+    float: left;
+    width: 142px;
+    height: 46px;
+    line-height: 46px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    background-color: #c81623;
+}
+
+
+/* 产品细节模块 */
+
+.aside {
+    width: 208px;
+    border: 1px solid #ccc;
+}
+
+.tab_list {
+    height: 33px;
+}
+
+.tab_list li {
+    float: left;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 12px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.tab_list_first {
+    width: 104px;
+    border-right: 1px solid #ccc;
+}
+
+.tab_list_second {
+    width: 103px;
+}
+
+.tab_list .as_current {
+    color: #c81623;
+    border-bottom: none;
+    background-color: #fff;
+}
+
+.tab_con {
+    padding: 0 10px;
+}
+
+.tab_con .classify_item {
+    width: 208px;
+    border-bottom: none;
+}
+
+.tab_con .classify_item a {
+    display: inline-block;
+    width: 94px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    border-bottom: 1px dashed #ededed;
+}
+
+.tab_con .classify_item .buy_other {
+    display: inline-block;
+    width: 180px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    border-bottom: 1px solid #ededed;
+}
+
+.tab_con li {
+    width: 188px;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab_con li h5 {
+    margin: 27px 0 17px 0;
+    /* 超出文字 省略号显示 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+}
+
+.tab_con li p {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.tab_con .tab_con_addshopcar {
+    display: block;
+    width: 88px;
+    height: 26px;
+    margin: 5px auto 20px;
+    line-height: 26px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+}
+
+.detail {
+    width: 978px;
+    margin: 0 0 80px 10px;
+}
+
+.detail_tab_list ul {
+    height: 39px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.detail_tab_list li {
+    float: left;
+    height: 39px;
+    padding: 0 20px;
+    line-height: 39px;
+    text-align: center;
+}
+
+.detail_tab_list .current {
+    color: #fff;
+    background-color: #c81623;
+}
+
+.detail_tab_con ul {
+    line-height: 25px;
+    padding: 20px 0 15px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.more {
+    float: right;
+    font-family: 'icomoon';
+    font-weight: 700;
+}
