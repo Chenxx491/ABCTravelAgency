@@ -1,0 +1,96 @@
+  .order_concent{
+
+  }
+  .box_1{
+    height: 30rpx;
+    background-color: #f5f5f5;
+  }
+  .order_title{
+    font-size:36rpx;
+    color: #666;
+    padding: 20rpx
+  }
+  .good_main{
+    background-color: white;
+    border-bottom: 1px solid #aaabeb;
+  }
+  .good_item{
+    display: flex;
+  }
+  .good_img_wrap{
+     flex: 2;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  image{
+    width: 80%;
+  }
+  .good_info{
+    flex: 5;
+  }
+  .good_name{
+    color: #666;
+    padding-left: 50rpx;
+  }
+  .good_price_wrap{
+    display: flex;
+    padding-top: 100rpx;
+  }
+  .good_price{
+    font-size: 60rpx;
+    color: #ff6700;
+    padding-left: 350rpx;
+    padding-bottom: 20rpx;
+  }
+  .box_2{
+    height: 40rpx;
+    background-color: #f5f5f5;
+  }
+  .order_sum {
+    border-bottom: 1px solid #aaabeb;
+    background-color: white;
+    height: 80rpx;
+  }
+  .name{
+    line-height: 80rpx;
+    padding-left: 30rpx;
+    font-size: 36rpx;
+    color: #666;
+  }
+  .money{
+    padding-left: 450rpx;
+    font-size: 34rpx;
+    color: #867f7a;
+  }
+  .box_3{
+    height: 600rpx;
+    background-color: #f5f5f5;
+  }
+  .submit{
+    display: flex;
+    height: 110rpx;
+    border-top: 1px solid #aaabeb;
+  }
+  .sum_money{
+    flex: 1;
+    padding-left: 30rpx;
+    line-height: 110rpx;
+    font-size: 40rpx;
+    color: #ff6700;
+  }
+  .submitBtn{
+    flex: 0.5;
+    border: 1px solid #aaabeb;
+    border-radius: 50rpx;
+    height: 80rpx;
+    margin-top: 15rpx;
+    margin-right: 30rpx;
+    background-color: #aaabeb;
+  }
+  .sunmitText{
+    line-height: 80rpx;
+    padding-left: 40rpx;
+    color: white;
+  }

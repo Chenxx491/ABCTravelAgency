@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "Tabs":"../../components/Tabs/Tabs"
+  },
+  "navigationBarBackgroundColor": "#aaabeb",
+  "navigationBarTitleText": "订单",
+  "backgroundColor":"#fafafa"
+}

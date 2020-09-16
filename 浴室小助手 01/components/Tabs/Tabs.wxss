@@ -1,0 +1,17 @@
+.Tabs{}
+.tabs_title{
+  display: flex;
+  padding: 10rpx;
+}
+.title_item{
+  color:#808080;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active{
+  color: black;
+  border-bottom: 1rpx solid #FF8C00;
+  font-size: 40rpx;
+}

@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/orders/orders",
+    "pages/mine/mine",
+    "pages/logs/logs",
+    "pages/yuyue/yuyue",
+    "pages/baoxiu/baoxiu",
+    "pages/userCoupon/userCoupon",
+    "pages/userHelp/userHelp",
+    "pages/userSetting/userSetting",
+    "pages/login/login",
+    "pages/submitOrder/submitOrder"
+  ],
+  
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#aaabeb",
+    "navigationBarTitleText": "浴室小助手",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":true,
+    "backgroundColor":"#fafafa"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#000",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "主页",
+      "iconPath": "image/home2.png",
+      "selectedIconPath": "image/home1.png"
+    },
+    {
+      "pagePath": "pages/orders/orders",
+      "text": "订单",
+      "iconPath": "image/order2.png",
+      "selectedIconPath": "image/order1.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "image/mine2.png",
+      "selectedIconPath": "image/mine1.png"
+    }]
+  },
+  "permission":{
+    "scope.userLocation": {
+      "desc":"当前位置"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}
+

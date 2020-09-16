@@ -1,0 +1,59 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+.function{
+  display: flex;
+  flex-direction: row;
+}
+.swiper{
+  width: 100%;
+  height: calc(100vm*280/520);
+}
+.image{
+  width: 100%;
+}
+.image1{
+  width: 400rpx;
+  height: 400rpx;
+}
+.im{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  width: 135rpx;
+  height: 135rpx;
+  background-color:transparent;
+}
+.button::after{
+  border: none;
+}
+.fimage{
+  width: 135rpx;
+  height: 135rpx;
+}
+.Function{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.weizhi{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 60rpx;
+  height: 60rpx;
+}
+.wz{
+  font-size: 30rpx;
+}
+.wzhi{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}

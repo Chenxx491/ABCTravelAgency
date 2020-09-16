@@ -1,0 +1,5 @@
+<image src="/image/shower.png"></image>
+<button plain open-type="getUserInfo" 
+              bindgetuserinfo="handleGetUserInfo" bindtap="tome">
+   登录
+</button>

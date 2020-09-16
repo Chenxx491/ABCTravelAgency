@@ -1,0 +1,41 @@
+<!--轮播图-->
+<view class="container">
+  <swiper class="swiper"
+          autoplay="{{autoplay}}" 
+          interval="{{interval}}"  
+          circular="{{circular}}" 
+          indicator-dots="{{indicatorDots}}" 
+          indicator-active-color="{{indicatoractivecolor}}"
+          circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="id">
+      <swiper-item>
+        <image class="image" src="{{item.url}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+    <view class="wzhi">
+    <image class="weizhi" src="/image/weizhi.png"></image>
+    <text class="wz">:{{local}}</text>
+    </view>
+  <view class="function">
+  <button  class="button" type="handleClicks" bindtap="goyuyue">
+  <image mode="aspectFit" src="/image/yuyue.png" plain="true" class="fimage"></image>
+  </button>
+  <button  class="button" type="handleClicks" bindtap="getScancode">
+  <image mode="aspectFit" src="/image/saoma.png" plain="true" class="fimage"></image>
+  </button>
+  <button  class="button" type="handleClicks" bindtap="gobaoxiu">
+  <image mode="aspectFit" src="/image/baoxiu.png" plain="true" class="fimage"></image>
+  </button>
+  </view>
+  <view class="Function">
+  <text>预约</text>
+  <text>扫一扫</text>
+  <text>报修</text>
+  </view>
+  <text decode>&nbsp;</text>
+  <text decode>&nbsp;</text>
+  <view class="im">
+<image class="image1" src="/image/xizao.png"></image>
+  </view>
+</view>

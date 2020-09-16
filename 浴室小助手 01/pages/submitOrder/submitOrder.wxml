@@ -1,0 +1,27 @@
+  <view class="box_1"></view>
+  <view class="good_main">
+    <view class="order_title">商品信息</view>
+    <view class="good_item">
+      <navigator class="good_img_wrap">
+        <image mode="widthFix" src="/image/shower-order.png"></image>
+      </navigator>
+      <view class="good_info">
+        <view class="good_name">欢迎使用浴室小助手</view>
+        <view class="good_price_wrap">
+          <view class="good_price">¥ 9.9</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="box_2"></view>
+  <view class="order_sum">
+    <text class="name">订单金额</text>
+    <text class="money">¥ 9.9</text>
+  </view>
+  <view class="box_3"></view>
+  <view class="submit">
+    <view class="sum_money">¥ 9.9</view>
+    <view class="submitBtn">
+      <text class="sunmitText">提交订单</text>  
+    </view>
+  </view>
