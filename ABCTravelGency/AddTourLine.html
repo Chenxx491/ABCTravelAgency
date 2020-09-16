@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加旅游线路</title>
+    <link rel="stylesheet" href="CSS/AddTourLine_style.css">
+</head>
+<body>
+<!-- 路线标题 -->
+<div class="title-box">
+    <input type="text" id="lineTitle" placeholder="请输入路线主题" name="lineTitle"/>
+</div>
+<!-- 行程路线 -->
+<div class="line-box">
+    <ul>
+        <li class="line-img">
+            <div class="imgBox">
+                <div class="picture">
+                  <span id="img_span">
+                    <input id="file" class="filepath" onchange="changepic(this)" type="file"><br>
+                  </span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="textEval" contenteditable="true" placeholder="请输入该景点的描述..."></div>
+        </li>
+
+        <li>
+            <div class="textEval" contenteditable="true" placeholder="请输入该景点的描述..."></div>
+        </li>
+        <li class="line-img">
+            <div class="imgBox">
+                <img id ="preview-two" />
+                <br />
+                <input type="file" name="file" onchange="imgPreview(this)" />
+            </div>
+        </li>
+
+        <li class="line-img"><img src="image/路线一吴哥窟1.jpg"></li>
+        <li>
+            <span><strong>Day05-Day06</strong><br><br><strong class="place">吴哥窟</strong>又称吴哥寺，位于柬埔寨，被称作柬埔寨国宝，是世界上
+                最大的庙宇类建筑，同时也是世界上最早的高棉式建筑。1992年联合国教科文组织将吴哥古迹列入世界文化遗产。
+                此后吴哥窟作为吴哥古迹的重中之重，成为了柬埔寨一张亮丽的旅游名片。</span>
+        </li>
+
+        <li>
+            <span><strong>Day07-Day08</strong><br><br><strong class="place">柬埔寨金边王宫</strong>是一组金色屋顶、黄墙环绕的建筑，包括曾查雅殿、金殿、
+                银殿、舞乐殿、宝物殿等大小宫殿二十多座，回廊上是仿吴哥寺的浮雕。曾查雅殿雕梁画栋，琉璃瓦顶，
+                同左侧金光闪烁的波列莫罗科特佛塔相呼应，景色壮观。金殿内有宝物殿，专门陈列珍宝。</span>
+        </li>
+        <li class="line-img"><img src="image/路线一金边王宫1.jpg"></li>
+
+        <li class="line-img"><img src="image/路线一普吉岛1.jpg"></li>
+        <li>
+            <span><strong>Day09-Day10</strong><br><br><strong class="place">普吉岛</strong>是泰国最大的岛屿，大部分游客都聚集在芭东海滩或普吉镇上，
+                这是整个普吉岛的两个中心。一个胜在海岛风光，一个胜在古老的建筑，
+                却都因为有完善的各项服务而得到游客们的青睐。</span>
+        </li>
+    </ul>
+
+    <script type="text/javascript">
+        var i=0;
+        function changepic(obj) {
+            //首先插入一个图片标签，src属性为空，宽高设置为100px，暂时设为不可见
+            document.getElementById("img_span").innerHTML+="<img src=\"\" id=\"show"+i+"\" width=\"200\" style=\"opacity: 0;\">";
+            //调用getObjectURL函数，返回上传的图片的地址
+            var newsrc=getObjectURL(obj.files[0]);
+            document.getElementById('show'+i).src=newsrc;//将图片的路径设置为返回上传的图片的地址
+            document.getElementById("show"+i).style.opacity=1;//将图片设置为可见
+            i++;
+        }
+        //建立一个可存取到该file的url
+        function getObjectURL(file) {
+            var url = null ;
+            // 下面函数执行的效果是一样的，只是需要针对不同的浏览器执行不同的 js 函数而已
+            if (window.createObjectURL!=undefined) { // basic
+                url = window.createObjectURL(file) ;
+            } else if (window.URL!=undefined) { // mozilla(firefox)
+                url = window.URL.createObjectURL(file) ;
+            } else if (window.webkitURL!=undefined) { // webkit or chrome
+                url = window.webkitURL.createObjectURL(file) ;
+            }
+            return url ;
+        }
+    </script>
+</div>
+<!-- 预定按钮 -->
+<div class="order-box">
+    <input type="button" id="order_btn" value="预定"/>
+</div>
+</body>
+</html>

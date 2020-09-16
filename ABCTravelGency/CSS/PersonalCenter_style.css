@@ -1,0 +1,401 @@
+/* 页面初始化 */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f2f2f2;
+}
+li {            /* 去掉列表自带样式 */
+    list-style: none;
+}
+button {  /* 去掉按钮自带边框 */
+    border: none;
+}
+/* 导航栏 */
+.menu:after {   /* 清除浮动，让父级自动适应高度，从而达到隔断下边标准流以防止被重叠 */
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.menu {    /* IE6、7 专有 */
+    *zoom: 1;
+}
+.menu {                /* 导航栏大盒子 */
+    background-color: #fff;
+    border-bottom: 1px solid #c3d6f4;
+}
+.logo-box {           /* 导航栏logo盒子 */
+    float: left;
+    margin-left: 210px;
+    margin-top:15px;
+    margin-bottom: 10px;
+}
+.logo-box img {         /* 导航栏logo图片 */
+    width: 80px;
+    height: 80px;
+}
+.nav-box {            /* 导航栏内容盒子*/
+    float: left;
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 450px;
+}
+.nav-box ul li {          /* 导航栏内容列表 */
+    float: left;
+    margin-right: 30px;
+}
+.nav-box ul li a {         /* 导航栏内容列表里边的链接 */
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 黑体;
+}
+.nav-box ul li a:hover {
+    color: #c3d6f4;
+    font-size: 25px;
+}
+.search-box {              /* 搜索框盒子 */
+    float: left;
+    margin-top: 40px;
+}
+.search-box button {      /* 搜索框按钮*/
+    float: left;
+    width: 60px;
+    height: 32px;
+    background-color: #c3d6f4;
+    color: #ffffff;
+}
+#search {          /* 搜索框文本 */
+    float: left;
+    padding-left: 10px;
+    width: 180px;
+    height: 30px;
+    border: 1px solid #c3d6f4;
+    color: #c3c3c3;
+}
+.user-box {            /* 用户信息盒子 */
+    float: left;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+.user-box img {            /* 用户头像图片 */
+    width: 50px;
+    height: 50px;
+}
+.user-box a {
+    text-decoration: none;
+}
+.title {
+    text-align: center;
+    margin-top: 15px;
+    font-family: 华文楷体;
+    font-size: 50px;
+}
+/* 个人中心页面 */
+.perNav-box {
+    position: relative;
+    width: 1100px;
+    height: 700px;
+    margin: 0 auto;
+}
+.perNav-left {             /* 左侧按钮盒子 */
+    position: absolute;
+    top: 100px;
+    left: 15px;
+    width: 200px;
+    height: 375px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.btnItems {                     /* 左侧按钮统一样式*/
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    margin: 30px auto;
+    text-align: center;
+    color: #b1a8b2;
+    cursor: pointer;              /* 鼠标变小手 */
+}
+.btnItems.active {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    margin: 30px auto;
+    text-align: center;
+    color: #fff;
+    background-color: #7c9ec1;
+    border-radius: 30px;
+}
+.item {                /* 右侧盒子内容统一样式 */
+    position: absolute;
+    top: 100px;
+    left: 235px;
+    width: 850px;
+    height: 600px;
+}
+.item:nth-child(1) {             /* 个人信息 */
+    position: absolute;
+    background-color: #fff;
+}
+.item:nth-child(2) {                /* 未完成订单 */
+    position: absolute;
+    background-color: #f2f2f2;
+}
+.item:nth-child(3) {                /* 已完成订单 */
+    position: absolute;
+    background-color: #fff;
+}
+.item:nth-child(4) {                /* 修改密码 */
+    position: absolute;
+    background-color: #f2f2f2;
+}
+.item:nth-child(5) {                /* 账户充值 */
+    position: absolute;
+    background-color: #f2f2f2;
+}
+.item.active {
+    z-index: 10;
+    opacity: 1;
+}
+.item hr {
+    width: 760px;
+    margin: 0 auto;
+    color: #8e89a3;
+}
+/* 个人信息 */
+.titleInfo {
+    margin-top: 30px;
+    text-align: center;
+}
+.infoForm {            /* 个人信息表单 */
+    margin: 20px auto;
+}
+.td-left {
+    text-align: right;
+    height: 50px;
+    font-size: 20px;
+    color: #c3c3c3;
+}
+.formStyle {                 /* 输入框统一样式  #888888 */
+    width: 200px;
+    height: 25px;
+    padding-left: 15px;
+    font-size: 18px;
+    border-style: none;
+    border-radius: 30px;
+}
+#sexMan {
+    margin-left: 15px;
+}
+#sexWoman {
+    margin-left: 30px;
+}
+#subUpdate{                   /* 更新按钮 */
+    width: 200px;
+    height: 40px;
+    margin-top: 80px;
+    color: #fff;
+    background-color: #7c9ec1;
+    border-radius: 30px;
+    border-style: none;
+    cursor: pointer;
+}
+/* 未完成订单 */
+.box {
+    width: 850px;
+    height: 220px;
+    background-color: #fff;
+}
+.box img {       /* 未完成订单图片 */
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.box a {       /* 未完成订单链接 */
+    float: left;
+    margin-top: 30px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+}
+.box a:hover {
+    color: #3b70ca;
+}
+.box span {
+    margin-top: 40px;
+}
+.box p {
+    float: left;
+    margin-top: 20px;
+    margin-left: 100px;
+    text-align: center;
+    color: #c3c3c3;
+}
+/* 已完成订单 */
+.item:nth-child(3) img {       /* 已完成订单图片 */
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.item:nth-child(3) a {       /* 已完成订单链接 */
+    float: left;
+    margin-top: 30px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+}
+.item:nth-child(3) a:hover {
+    color: #3b70ca;
+}
+.item:nth-child(3) p {
+    float: left;
+    margin-top: 20px;
+    margin-left: 100px;
+    text-align: center;
+    color: #c3c3c3;
+}
+#buttoneval {         /* 评价按钮 */
+    float: left;
+    width: 60px;
+    height: 30px;
+    margin-top: 50px;
+    margin-left: 50px;
+    color: #fff;
+    background-color: #7c9ec1;
+    border-radius: 50px;
+}
+.price {                     /* 订单价格 */
+    float: right;
+    margin-top: 40px;
+    margin-right: 50px;
+    font-size: 30px;
+    color: #ff6700;
+}
+.textEval {
+    float: left;
+    margin-top: 10px;
+    margin-left: 200px;
+    border:1px solid #a0b3d6;/*设置边框1px，实线，边框线色为#a0b3d6 */
+    width: 500px;
+    min-height: 300px;
+    font-size: 14px;
+    padding: 4px;
+    color: #333;
+    outline:0; /* 当元素获得焦点的时候，焦点框为0.去掉虚线框（或高亮框）*/
+}
+
+/* 当输入框为空时，显示默认文字 */
+.textEval:empty::before{
+    content:attr(placeholder); /*获取属性的值 attr（value）,可以获得属性值 */
+    color: #999;
+}
+/* 修改密码 */
+.password_box {
+    width: 850px;
+    height: 320px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background-color: #fff;
+}
+.password_title {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+#password {
+    display: block;
+    width: 250px;
+    height:30px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-left: 15px;
+    border-radius: 30px;
+    border: 1px solid #000;
+}
+#newPassword {
+    display: block;
+    width: 250px;
+    height:30px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-left: 15px;
+    border-radius: 30px;
+    border: 1px solid #8e89a3;
+}
+#confirmBtn {
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: #fff;
+    border-style: none;
+    border-radius: 30px;
+    background-color: #7c9ec1;
+    cursor: pointer;
+}
+/* 账户充值 */
+.account-box {
+    width: 850px;
+    height: 320px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background-color: #fff;
+}
+.accout_title {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.account-box span {
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 250px;
+    font-size: 20px;
+    text-align: center;
+}
+.payWays {
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+}
+#money {
+    display: block;
+    width: 300px;
+    height: 50px;
+    margin: 30px auto;
+    padding-left: 15px;
+    border-radius: 10px;
+}
+#comfirmRechange {
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 350px;
+    color: #fff;
+    background-color: #7c9ec1;
+    border-style: none;
+    border-radius: 15px;
+}
+/* 最后的联系条 */
+.end-box {
+    margin-top: 30px;
+    height: 70px;
+    background-color: #333333;
+}
+.end-box ul {
+    margin-left: 630px;
+}
+.end-box ul li {
+    margin-top: 20px;
+    margin-right: 30px;
+    float: left;
+    color: #fff;
+}

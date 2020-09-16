@@ -1,0 +1,107 @@
+* {      /* 清除内外边距 */
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.box{     /* 存放所有内容的大盒子 */
+    width: 900px;
+    height: 700px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-top: 2px solid #9cbad6;
+}
+.logo-box {         /* 存放 logo 的盒子 */
+    margin: auto;
+    width: 70px;
+    height: 65px;
+    background-color: #9cbad6;
+}
+.logo-box h1 {
+    line-height: 65px;
+    color: white;
+    font-family: "Adobe Devanagari";
+}
+.title-box {
+    padding-top: 30px;
+    text-align: center;
+}
+.infoForm {
+    margin-top: 30px;
+    margin-left: 270px;
+}
+.td-left {
+    text-align: right;
+    height: 50px;
+    color: #c3c3c3;
+}
+/* 姓名、昵称、性别、邮箱、手机、地址、密码、账户余额 */
+#title {
+    font-family: "新宋体";
+}
+#username{
+    width: 200px;
+    height: 25px;
+    border: 1px #888888 solid;
+    border-radius: 30px;
+    padding-left: 15px;
+}
+#nickname {
+    width: 200px;
+    height: 25px;
+    border: 1px #888888 solid;
+    border-radius: 30px;
+    padding-left: 15px;
+}
+#sexWoman {
+    margin-left: 30px;
+}
+#Email{
+    width: 200px;
+    height: 25px;
+    border: 1px #888888 solid;
+    border-radius: 30px;
+    padding-left: 15px;
+}
+#Tell {
+    width: 200px;
+    height: 25px;
+    border: 1px #888888 solid;
+    border-radius: 30px;
+    padding-left: 15px;
+}
+#Address{
+    width: 200px;
+    height: 25px;
+    border: 1px #888888 solid;
+    border-radius: 30px;
+    padding-left: 15px;
+}
+#password{
+    width: 200px;
+    height: 25px;
+    border: 1px #888888 solid;
+    border-radius: 30px;
+    padding-left: 15px;
+}
+#AccountBalance{
+    width: 200px;
+    height: 25px;
+    border: 1px #888888 solid;
+    border-radius: 30px;
+    padding-left: 15px;
+}
+#sub{
+    background-color: #7c9ec1;
+    color: #fff;
+    border: 1px solid rgba(186,186,186,.3);
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-left: 50px;
+    cursor: pointer;
+}

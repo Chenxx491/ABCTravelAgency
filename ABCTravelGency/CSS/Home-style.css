@@ -1,0 +1,318 @@
+/* 页面初始化 */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f2f2f2;
+}
+li {            /* 去掉列表自带样式 */
+    list-style: none;
+}
+button {  /* 去掉按钮自带边框 */
+    border: none;
+}
+/* 导航栏 */
+.menu:after {   /* 清除浮动，让父级自动适应高度，从而达到隔断下边标准流以防止被重叠 */
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.menu {    /* IE6、7 专有 */
+    *zoom: 1;
+}
+.menu {                /* 导航栏大盒子 */
+    background-color: #fff;
+    border-bottom: 1px solid #c3d6f4;
+}
+.logo-box {           /* 导航栏logo盒子 */
+    float: left;
+    margin-left: 210px;
+    margin-top:15px;
+    margin-bottom: 10px;
+}
+.logo-box img {         /* 导航栏logo图片 */
+    width: 80px;
+    height: 80px;
+}
+.nav-box {            /* 导航栏内容盒子*/
+    float: left;
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 450px;
+}
+.nav-box ul li {          /* 导航栏内容列表 */
+    float: left;
+    margin-right: 30px;
+}
+.nav-box ul li a {         /* 导航栏内容列表里边的链接 */
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 黑体;
+}
+.nav-box ul li a:hover {
+    color: #c3d6f4;
+    font-size: 25px;
+}
+.search-box {              /* 搜索框盒子 */
+    float: left;
+    margin-top: 40px;
+}
+.search-box button {      /* 搜索框按钮*/
+    float: left;
+    width: 60px;
+    height: 32px;
+    background-color: #c3d6f4;
+    color: #ffffff;
+}
+#search {          /* 搜索框文本 */
+    float: left;
+    padding-left: 10px;
+    width: 180px;
+    height: 30px;
+    border: 1px solid #c3d6f4;
+    color: #c3c3c3;
+}
+.user-box {            /* 用户信息盒子 */
+    float: left;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+.user-box img {            /* 用户头像图片 */
+    width: 50px;
+    height: 50px;
+}
+.user-box a {
+    text-decoration: none;
+}
+
+/* 轮播图 */
+.slideshow-box {          /* 轮播图大盒子 */
+    width: 1100px;
+    height: 500px;
+    position: relative;
+    padding-left: 0;
+    margin: auto auto;
+    cursor: pointer;       /* 鼠标放上去变小手 */
+}
+.list {                 /* 轮播图大盒子 */
+    width: 1100px;
+    height: 500px;
+    position: relative;
+}
+.item {                /* 轮播图列表 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 50px;
+    opacity: 0;
+    transition: all .8s;
+}
+.item:nth-child(1) {
+    background: url("../image/东南亚 02.png") no-repeat center;
+}
+.item:nth-child(2) {
+    background: url("../image/欧洲03.png") no-repeat center;
+}
+.item:nth-child(3) {
+    background: url("../image/故宫01.png") no-repeat center;
+}
+.item.active {
+    z-index: 10;
+    opacity: 1;
+}
+.leftSubnav-box {         /* 左侧导航栏盒子 */
+    position: absolute;
+    top: 0px;
+    z-index: 100;
+    width: 240px;
+    height: 180px;
+    background: rgb(0,0,0,.3);
+}
+.subnav {                 /* 左侧导航栏列表 */
+    height: 45px;
+    line-height: 45px;
+    margin-top: 10px;
+}
+.subnav.active {
+    background-color: #789cce;
+}
+.subnav a {             /* 左侧导航栏链接 */
+    margin-left: 20px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+.leftSubnav-box a span {        /* 左侧导航栏内容 */
+    float: right;
+    margin-right: 20px;
+}
+/* 翻页按钮样式 */
+.btn {                 /* 翻页按钮盒子 */
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    top: 200px;
+    z-index: 100;
+    background-color: transparent;
+    border-style: none;
+}
+.btn img {            /* 翻页按钮图片 */
+    width: 50px;
+    height: 50px;
+    margin-top: 25px;
+}
+.btn:hover {
+    background: rgb(0,0,0,.3);    /* 透明度 */
+}
+#left {           /* 左翻页按钮 */
+    left: 0;
+}
+#right {           /* 右翻页按钮 */
+    right: 0;
+}
+
+/* 小圆点 */
+.pointList {
+    padding-left: 0;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+}
+.point {
+    width: 9px;
+    height: 9px;
+    background-color: #9cbad6;
+    border-radius: 100px;
+    float: left;
+    margin-right: 14px;
+    border: 1px solid #bbb2b1;
+    cursor: pointer;
+}
+.point.active {
+    width: 12px;
+    height: 12px;
+    background-color: #fcfcfc;
+}
+
+/* 为您推荐 */
+.recPlace-box:after {   /* 清除浮动，让父级自动适应高度，从而达到隔断下边标准流以防止被重叠 */
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.recPlace-box {    /* IE6、7 专有 */
+    *zoom: 1;
+}
+.recPlace-box {              /* 旅游地点推荐盒子 */
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.placeTitle {          /* 旅游地点推荐标题  */
+    font-size: 30px;
+    color: #789cce;
+}
+.placeTitle hr {
+    border: 2px solid #c6d9e0;
+}
+.placeList li {        /* 旅游地点推荐列表 */
+    float: left;
+    width: 250px;
+    height: 350px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+}
+.placeList li img {     /* 旅游地点推荐图片 */
+    width: 250px;
+    height: 220px;
+}
+.placeList li p {             /* 旅游地点推荐图片详细信息 */
+    display: block;
+    width: 230px;
+    height: 120px;
+    margin: 10px auto;
+    font-family: 华文楷体;
+    font-size: 16px;
+    color: #000;
+}
+.placeList li strong {
+    font-size: 18px;
+    color: #0272ba;
+}
+/* 广告条 */
+.banner-box {
+    width: 1100px;
+    height: 100px;
+    margin: 30px auto;
+    background-color: #789cce;
+}
+/* 酒店推荐 */
+.recHotel-box:after {   /* 清除浮动，让父级自动适应高度，从而达到隔断下边标准流以防止被重叠 */
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.recHotel-box {    /* IE6、7 专有 */
+    *zoom: 1;
+}
+.recHotel-box {       /* 酒店推荐盒子 */
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.recHotel-box span {       /* 酒店推荐标题 */
+    font-size: 30px;
+    color: #789cce;
+}
+.recHotel-box hr {
+    border: 2px solid #c6d9e0;
+}
+.hotelList li {           /* 酒店推荐列表 */
+    float: left;
+    width: 250px;
+    height: 350px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+}
+.hotelList li img {       /* 酒店推荐图片 */
+    width: 250px;
+    height: 220px;
+}
+.hotelList li p {        /* 酒店推荐图片详细信息 */
+    font-family: 华文楷体;
+    font-size: 15px;
+    margin-top: 20px;
+    text-align: center;
+    color: #5f5750;
+}
+.hotelList li strong {
+    font-size: 18px;
+    color: #0272ba;
+}
+/* 最后的联系条 */
+.end-box {
+    margin-top: 30px;
+    height: 70px;
+    background-color: #333333;
+}
+.end-box ul {
+    margin-left: 630px;
+}
+.end-box ul li {
+    margin-top: 20px;
+    margin-right: 30px;
+    float: left;
+    color: #fff;
+}

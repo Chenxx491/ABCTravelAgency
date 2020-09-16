@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f2f2f2;
+}
+li {
+    list-style: none;
+}
+button {  /* 去掉按钮自带边框 */
+    border: none;
+}
+/* 路线标题 */
+.title-box {       /* 标题盒子 */
+    width: 1100px;
+    height: 80px;
+    line-height: 80px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.title-box input {
+    width: 285px;
+    height: 50px;
+    margin-left: 400px;
+    padding-left: 15px;
+}
+/* 行程路线 */
+.line-box:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.line-box {
+    *zoom: 1;
+}
+.line-box {         /* 行程列表盒子 */
+    width: 1100px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.line-box ul li {     /* 行程列表 */
+    float: left;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.imgBox {
+    width: 490px;
+    height: 300px;
+    border: 1px solid #8e89a3;
+}
+.picture{
+    width: 600px;
+    height: 600px;
+    margin-left: 150px;
+    border:1px solid #000;
+}
+#img_span img{
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    margin-top: 20px;
+
+}
+.textEval {
+    width: 490px;
+    min-height: 250px;
+    padding: 4px;
+    border:1px solid #a0b3d6;/*设置边框1px，实线，边框线色为#a0b3d6 */
+    font-size: 14px;
+    color: #333;
+    outline:0; /* 当元素获得焦点的时候，焦点框为0.去掉虚线框（或高亮框）*/
+}
+/* 当输入框为空时，显示默认文字 */
+.textEval:empty::before{
+    content:attr(placeholder); /*获取属性的值 attr（value）,可以获得属性值 */
+    color: #999;
+}
+/* 预定按钮盒子 */
+.order-box {
+    width: 1100px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+#order_btn {          /* 预定按钮 */
+    width: 100px;
+    height: 40px;
+    margin-top: 80px;
+    margin-left: 500px;
+    color: #ffffff;
+    border-radius: 30px;
+    background-color: #1b5f68;
+    border-style: none;
+}

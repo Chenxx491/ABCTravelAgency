@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f2f2f2;
+}
+button {  /* 去掉按钮自带边框 */
+    border: none;
+}
+li {      /* 去掉列表自带样式 */
+    list-style: none;
+}
+input{
+    outline: none;
+}
+/* 导航栏 */
+.menu:after {   /* 清除浮动，让父级自动适应高度，从而达到隔断下边标准流以防止被重叠 */
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.menu {    /* IE6、7 专有 */
+    *zoom: 1;
+}
+.menu {                  /* 导航栏大盒子 */
+    background-color: #fff;
+    border-bottom: 1px solid #c3d6f4;
+}
+.logo-box {           /* 导航栏logo盒子 */
+    float: left;
+    margin-left: 210px;
+    margin-top:15px;
+    margin-bottom: 10px;
+}
+.logo-box img {         /* 导航栏logo图片 */
+    width: 80px;
+    height: 80px;
+}
+.nav-box {             /* 导航栏内容盒子*/
+    float: left;
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 450px;
+}
+.nav-box ul li {          /* 导航栏内容列表 */
+    float: left;
+    margin-right: 50px;
+}
+.nav-box ul li a {         /* 导航栏内容列表里边的链接 */
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 黑体;
+}
+.nav-box ul li a:hover {
+    color: #c3d6f4;
+    font-size: 25px;
+}
+.search-box {               /* 搜索框盒子 */
+    float: left;
+    margin-top: 40px;
+}
+.search-box button {      /* 搜索框按钮*/
+    float: left;
+    width: 60px;
+    height: 32px;
+    background-color: #c3d6f4;
+    color: #ffffff;
+}          /* 搜索框文本 */
+#search {
+    float: left;
+    padding-left: 10px;
+    width: 180px;
+    height: 30px;
+    border: 1px solid #c3d6f4;
+    color: #c3c3c3;
+}
+/* 登录框 */
+.login-box {         /* 登录框大盒子 */
+    width: 1100px;
+    height: 500px;
+    margin: 50px auto;
+    position: relative;
+    background: url("../image/稻城.jpg");
+}
+.form-box {      /* 登录框表单盒子 */
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 80px;
+    left: 250px;
+    background-color: #5f5750;
+    opacity: 0.75;
+}
+.login-box form input {       /* 登录框input */
+    display: block;
+    margin: 30px auto;
+}
+.format {    /* input 样式 */
+    width: 300px;
+    height: 35px;
+    padding-left: 15px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 30px;
+    border: 1px solid #5f5750;
+}
+.btnSub {   /* 登录按钮 */
+    width: 315px;
+    padding-left: 0px;
+    color: #fff;
+    background-color: #000;
+}
+.btnSub:hover{
+    color: #789cce;
+}
+#findPassword {    /* 找回密码 */
+    margin-left: 150px;
+    text-decoration: none;
+    color: #fff;
+}
+#findPassword:hover {
+    color: #789cce;
+}

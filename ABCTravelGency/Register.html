@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 注册：姓名、昵称、性别、邮箱、手机、地址、密码、账户余额 -->
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+<link rel="stylesheet" href="CSS/Register_Style.css">
+</head>
+<body>
+<!-- 注册：姓名、昵称、性别、邮箱、手机、地址、密码、账户余额 -->
+<div class="box">
+    <div class="logo-box"><h1>ABC</h1></div>
+
+    <div class="title-box"><h1 id="title">注册ABC旅行社账号</h1></div>
+
+    <div class="formBox">
+      <form  class="userInfo" action="#" method="post">
+        <table class="infoForm">
+            <tr>
+                <td class="td-left">
+                    <label for="username">姓名：</label>
+                </td>
+                <td class="td-right">
+                    <input type="text" id="username" placeholder="请输入用户名" name="username"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="td-left">
+                    <label for="nickname">昵称：</label>
+                </td>
+                <td class="td-right">
+                    <input type="text" id="nickname" placeholder="为自己起一个特别的昵称吧！" name="nickname"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="td-left">
+                    性别：
+                </td>
+                <td>
+                    <input id="sexMan" type="radio" name="sex" value="male"/> 男
+                    <input id="sexWoman" type="radio" name="sex" value="female"/> 女
+                </td>
+            </tr>
+
+            <tr>
+                <td class="td-left">
+                    <label for="Email">邮箱：</label>
+                </td>
+                <td class="td-right">
+                    <input type="email" id="Email" placeholder="请输入邮箱" name="Email"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="td-left">
+                    <label for="Tell">手机号：</label>
+                </td>
+                <td class="td-right">
+                    <input type="text" id="Tell" placeholder="请输入手机号" name="Tell"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="td-left">
+                    <label for="Address">地址：</label>
+                </td>
+                <td class="td-right">
+                    <input type="text" id="Address" placeholder="请输入地址" name="Address"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="td-left">
+                    <label for="password">密码：</label>
+                </td>
+                <td class="td-right">
+                    <input type="password" id="password" placeholder="请输入密码" name="password"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="td-left">
+                    <label for="AccountBalance">账户余额：</label>
+                </td>
+                <td class="td-right">
+                    <input type="accountBalance" id="AccountBalance" placeholder="请输入地址" name="AccountBalance"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="注册" id="sub"/>
+                </td>
+            </tr>
+         </table>
+      </form>
+    </div>
+</div>
+</body>
+</html>

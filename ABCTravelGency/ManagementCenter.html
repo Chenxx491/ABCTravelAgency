@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员中心</title>
+    <link rel="stylesheet" href="CSS/ManagementCenter.css">
+</head>
+<body>
+<!-- 侧边选择栏 -->
+<div class="perNav-box">
+    <h1 class="title">管理员中心</h1>
+    <!-- 左侧按钮栏 -->
+    <ul class="perNav-left">
+        <li class="btnItems active"  id="btn-infor" data-index = "0">线路管理</li>
+        <li class="btnItems"  id="btn-unfulOrder" data-index = "1">预定确认</li>
+        <li class="btnItems"  id="btn-comOrder" data-index = "2">评价回复</li>
+        <li class="btnItems" id="btn-password" data-index = "3">修改密码</li>
+    </ul>
+    <!-- 右侧页面栏 -->
+    <ul class="perNav-right">
+        <li class="item active">                  <!-- 线路管理 -->
+            <div class="table-box">
+                <table cellspacing="0">
+                    <tr>
+                        <td>路线号</td>
+                        <td>路线名称</td>
+                        <td>路线价格</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>LX001</td>
+                        <td>魅力东南亚十日游</td>
+                        <td>￥&nbsp;50000元</td>
+                        <td><a href="#">修改</a></td>
+                        <td><a href="#">删除</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>LX002</td>
+                        <td>欧洲风情十日游</td>
+                        <td>￥&nbsp;70000元</td>
+                        <td><a href="#">修改</a></td>
+                        <td><a href="#">删除</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>LX003</td>
+                        <td>大美中国十日游</td>
+                        <td>￥&nbsp;30000元</td>
+                        <td><a href="#">修改</a></td>
+                        <td><a href="#">删除</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><a href="#" class="addBtn">添加路线</a></td>
+                    </tr>
+
+
+                </table>
+            </div>
+        </li>
+        <li class="item">                 <!-- 预定确认 -->
+            <div class="box">
+                <img src="image/路线一东南亚.jpg"/>
+                <p>订单编号：002</p>
+                <p>下单时间：2020.6.26</p>
+                <a href="FirstLineSoutheastAsia.html">路线一：新加坡鱼尾狮公园+巴厘岛+吴哥窟+金边王宫+普吉岛
+                    【魅力东南亚十日游】</a>
+                <button id="buttonConfirm">确认订单</button>
+                <span class="price">￥&nbsp;50000元</span>
+            </div>
+        </li>
+        <li class="item">    <!-- 评价回复 -->
+            <div class="eval-box">
+                <img src="image/路线一东南亚.jpg"/>
+                <p>订单编号：002</p>
+                <p>下单时间：2020.6.26</p>
+                <a href="FirstLineSoutheastAsia.html">路线一：新加坡鱼尾狮公园+巴厘岛+吴哥窟+金边王宫+普吉岛
+                    【魅力东南亚十日游】</a>
+                <button id="buttoneval">回复</button>
+                <span class="price">￥&nbsp;50000元</span>
+                <p id="usereval">来自用户xiaoming的评价：此次旅行非常满意。</p>
+                <div class="textEval" contenteditable="true" placeholder="请输入对该评价的回复..."></div>
+            </div>
+        </li>
+        <li class="item">    <!-- 修改密码 -->
+            <div class="password_box">
+                <h2 class="password_title">修改密码</h2><hr>
+                <input type="password" id="password" placeholder="请输入旧密码..." name="password"/>
+                <input type="password" id="newPassword" placeholder="请输入新密码..." name="newPassword"/>
+                <input type="button" id="confirmBtn" value="确认修改" name="confirmBtn"/>
+            </div>
+        </li>
+    </ul>
+    <script type="text/javascript">
+        var items = document.getElementsByClassName('item');      // 右侧页面栏
+        var itemBtn = document.getElementsByClassName('btnItems');      // 左侧按钮栏
+        var index = 0;
+
+        var clearActive = function () {   // 清除active
+            for(var i = 0;i < items.length;i++){    // 清除图片的active
+                items[i].className = 'item';
+            }
+            for(var i = 0;i < itemBtn.length;i++){      // 清除按钮的active
+                itemBtn[i].className = 'btnItems';
+            }
+        }
+
+        var goIndex = function () {   // 加上active
+            clearActive();
+            console.log(index);
+            items[index].className = 'item active';       // 加上图片的active
+            itemBtn[index].className = 'btnItems active';     // 加上按钮的active
+        }
+
+        // 按钮控制换页面
+        for(var i = 0;i < itemBtn.length;i++){
+            itemBtn[i].addEventListener('click',function () {
+                var btnIndex = this.getAttribute('data-index');
+                index = btnIndex;
+                goIndex();
+            })
+        }
+
+    </script>
+</div>
+
+</body>
+</html>

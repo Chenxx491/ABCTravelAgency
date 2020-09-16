@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="CSS/PersonalCenter_style.css">
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="menu">
+    <div class="logo-box"><img src="image/ABC01.png"/></div>
+
+    <div class="nav-box">
+        <ul>
+            <li><a href="Home.html">首页</a></li>
+            <li><a href="TourRoutePage.html">旅游线路</a></li>
+            <li><a href="LoginPage.html">个人中心</a></li>
+            <li><a href="Register.html">退出</a></li>
+        </ul>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="search" value="请输入..." name="search"/>
+        <button>搜索</button>
+    </div>
+
+    <div class="user-box">
+        <a href="LoginPage.html">
+            <img src="image/个人.png"/>
+            <p>您好，xiaoming</p>
+        </a>
+    </div>
+</div>
+<!-- 侧边选择栏 -->
+<div class="perNav-box">
+    <h1 class="title">个人中心</h1>
+<!-- 左侧按钮栏 -->
+    <ul class="perNav-left">
+        <li class="btnItems active"  id="btn-infor" data-index = "0">个人信息</li>
+        <li class="btnItems"  id="btn-unfulOrder" data-index = "1">未完成订单</li>
+        <li class="btnItems"  id="btn-comOrder" data-index = "2">已完成订单</li>
+        <li class="btnItems" id="btn-password" data-index = "3">修改密码</li>
+        <li class="btnItems" id="btn-recharge" data-index = "4">账户充值</li>
+    </ul>
+<!-- 右侧页面栏 -->
+    <ul class="perNav-right">
+        <li class="item active">                  <!-- 个人信息 -->
+            <h2 class="titleInfo">基本信息</h2><hr>
+            <form  class="userInfo" action="#" method="post">
+                <table class="infoForm">
+                    <tr>
+                        <td class="td-left">
+                            <label for="username">姓名：</label>
+                        </td>
+                        <td class="td-right">
+                            <input class="formStyle" type="text" id="username" placeholder="请输入用户名" name="username"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td-left">
+                            <label for="nickname">昵称：</label>
+                        </td>
+                        <td class="td-right">
+                            <input class="formStyle" type="text" id="nickname" placeholder="为自己起一个特别的昵称吧！" name="nickname"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td-left">
+                            性别：
+                        </td>
+                        <td>
+                            <input id="sexMan" type="radio" name="sex" value="male"/> 男
+                            <input id="sexWoman" type="radio" name="sex" value="female"/> 女
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td-left">
+                            <label for="Email">邮箱：</label>
+                        </td>
+                        <td class="td-right">
+                            <input class="formStyle" type="email" id="Email" placeholder="请输入邮箱" name="Email"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td-left">
+                            <label for="Tell">手机号：</label>
+                        </td>
+                        <td class="td-right">
+                            <input class="formStyle" type="text" id="Tell" placeholder="请输入手机号" name="Tell"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td-left">
+                            <label for="Address">地址：</label>
+                        </td>
+                        <td class="td-right">
+                            <input class="formStyle" type="text" id="Address" placeholder="请输入地址" name="Address"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td-left">
+                            <label for="Acount">账户余额：</label>
+                        </td>
+                        <td class="td-right">
+                            <input class="formStyle" id="Acount" placeholder="￥ 1000.00" name="Acount"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="确认更新" id="subUpdate"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </li>
+        <li class="item">                 <!-- 未完成订单 -->
+            <div class="box">
+                <img src="image/路线一东南亚.jpg"/>
+                <p>订单编号：001</p>
+                <p>下单时间：2020.6.25</p>
+                <a href="FirstLineSoutheastAsia.html">路线一：新加坡鱼尾狮公园+巴厘岛+吴哥窟+金边王宫+普吉岛
+                    【魅力东南亚十日游】</a>
+                <span class="price">￥&nbsp;50000元</span>
+            </div>
+        </li>
+        <li class="item">    <!-- 已完成订单 -->
+            <img src="image/路线一东南亚.jpg"/>
+            <p>订单编号：002</p>
+            <p>下单时间：2020.6.26</p>
+            <a href="FirstLineSoutheastAsia.html">路线一：新加坡鱼尾狮公园+巴厘岛+吴哥窟+金边王宫+普吉岛
+                【魅力东南亚十日游】</a>
+            <button id="buttoneval">评价</button>
+            <span class="price">￥&nbsp;50000元</span>
+            <div class="textEval" contenteditable="true" placeholder="请输入对此订单的评价..."></div>
+        </li>
+        <li class="item">    <!-- 修改密码 -->
+            <div class="password_box">
+            <h2 class="password_title">修改密码</h2><hr>
+            <input type="password" id="password" placeholder="请输入旧密码..." name="password"/>
+            <input type="password" id="newPassword" placeholder="请输入新密码..." name="newPassword"/>
+            <input type="button" id="confirmBtn" value="确认修改" name="confirmBtn"/>
+            </div>
+        </li>
+        <li class="item">    <!-- 账户充值 -->
+            <div class="account-box">
+                <h2 class="accout_title">账户充值</h2><hr>
+                <span class="left">请选择充值方式：</span>
+                <select class="payWays">
+                    <option value ="CCB">建设银行</option>
+                    <option value ="ICBC">工商银行</option>
+                    <option value ="Alipay">支付宝</option>
+                </select>
+                <input type="text" id="money" placeholder="请输入充值金额..." name="money"/>
+                <input type="button" id="comfirmRechange" value="确认充值"/>
+            </div>
+        </li>
+    </ul>
+    <script type="text/javascript">
+        var items = document.getElementsByClassName('item');      // 右侧页面栏
+        var itemBtn = document.getElementsByClassName('btnItems');      // 左侧按钮栏
+        var index = 0;
+
+        var clearActive = function () {   // 清除active
+            for(var i = 0;i < items.length;i++){    // 清除图片的active
+                items[i].className = 'item';
+            }
+            for(var i = 0;i < itemBtn.length;i++){      // 清除按钮的active
+                itemBtn[i].className = 'btnItems';
+            }
+        }
+
+        var goIndex = function () {   // 加上active
+            clearActive();
+            console.log(index);
+            items[index].className = 'item active';       // 加上图片的active
+            itemBtn[index].className = 'btnItems active';     // 加上按钮的active
+        }
+
+        // 按钮控制换页面
+        for(var i = 0;i < itemBtn.length;i++){
+            itemBtn[i].addEventListener('click',function () {
+                var btnIndex = this.getAttribute('data-index');
+                index = btnIndex;
+                goIndex();
+            })
+        }
+
+    </script>
+</div>
+<!-- 最后的联系条 -->
+<div class="end-box">
+    <ul>
+        <li>关于ABC旅行社</li>
+        <li>联系我们</li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="CSS/Login_style.css">
+
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="menu">
+    <div class="logo-box"><img src="image/ABC01.png"/></div>   <!-- 导航栏logo -->
+
+    <div class="nav-box">                                      <!-- 导航栏内容 -->
+        <ul>
+            <li><a href="Home.html">首页</a></li>
+            <li><a href="TourRoutePage.html">旅游线路</a></li>
+            <li><a href="LoginPage.html">登录</a></li>
+            <li><a href="Register.html">注册</a></li>
+        </ul>
+    </div>
+
+    <div class="search-box">                  <!-- 导航栏搜索框 -->
+        <input type="text" id="search" value="请输入..." name="search"/>
+        <button>搜索</button>
+    </div>
+</div>
+
+<!-- 登录框 -->
+<div class="login-box">
+    <div class="form-box">         <!-- 登录框表单 -->
+        <form action="#" method="post">
+            <input class="format" id="username" type="text" placeholder="请输入手机号/邮箱" name="username">
+            <input class="format" id="password" type="password" placeholder="请输入密码" name="password">
+            <input class="btnSub format" type="submit" value="登录" id="subLogin"/>
+        </form>
+        <a id="findPassword" href="#">找回密码</a>
+    </div>
+</div>
+
+</body>
+</html>

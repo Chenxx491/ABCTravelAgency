@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="CSS/Home-style.css">
+
+</head>
+
+<body>
+<!-- 导航栏 -->
+<div class="menu">
+    <div class="logo-box"><img src="image/ABC01.png"/></div>
+
+    <div class="nav-box">
+        <ul>
+            <li><a href="Home.html">首页</a></li>
+            <li><a href="TourRoutePage.html">旅游线路</a></li>
+            <li><a href="LoginPage.html">登录</a></li>
+            <li><a href="Register.html">注册</a></li>
+        </ul>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="search" value="请输入..." name="search"/>
+        <button>搜索</button>
+    </div>
+
+    <div class="user-box">
+        <a href="LoginPage.html">
+            <img src="image/个人.png"/>
+            <p>请登录...</p>
+        </a>
+
+    </div>
+</div>
+
+<!-- 轮播图 -->
+<div class="slideshow-box">
+<!-- 图片 -->
+    <ul class="list">
+        <li class="item active"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+    </ul>
+<!-- 左侧导航栏 -->
+    <div class="leftSubnav-box">
+        <ul class="subnavList">
+            <li class="subnav active" data-index = "0"><a href="FirstLineSoutheastAsia.html">魅力东南亚十日游<span>></span></a></li>
+            <li class="subnav" data-index = "1"><a href="SecondLineEuropean.html">欧洲风情十日游<span>></span></a></li>
+            <li class="subnav" data-index = "2"><a href="ThreeLineChain.html">大美中国十日游<span>></span></a></li>
+        </ul>
+    </div>
+<!-- 翻页按钮 -->
+    <div class="btn" id="left"><img src="image/翻页左.png"/></div>
+    <div class="btn" id="right"><img src="image/翻页右.png"/></div>
+<!-- 圆点 -->
+    <ul class="pointList">
+        <li class="point active" data-index = "0"></li>
+        <li class="point" data-index = "1"></li>
+        <li class="point" data-index = "2"></li>
+    </ul>
+
+    <script type="text/javascript">
+        var items = document.getElementsByClassName('item');      // 图片
+        var leftsubnav = document.getElementsByClassName('subnav');   // 左侧导航栏
+        var points = document.getElementsByClassName('point');   // 圆点
+        var leftBtn = document.getElementById('left');         // 左翻页按钮
+        var rightBtn = document.getElementById('right');       // 右翻页按钮
+
+        var index = 0; // 表示当前第几张图片在展示，即第index张图有active类名；
+        var time = 0;  // 定时器
+        var clearActive = function () {   // 清除active
+            for(var i = 0;i < items.length;i++){    // 清除图片的active
+                items[i].className = 'item';
+            }
+            for(var i = 0;i < points.length;i++){      // 清除圆点的active
+                points[i].className = 'point';
+            }
+            for(var i = 0;i < leftsubnav.length;i++){      // 清除左侧导航栏的active
+                leftsubnav[i].className = 'subnav';
+            }
+        }
+
+        var goIndex = function () {   // 加上active
+            clearActive();
+            console.log(index);
+            items[index].className = 'item active';       // 加上图片的active
+            leftsubnav[index].className = 'subnav active';   // 加上左侧导航栏的active
+            points[index].className = 'point active';     // 加上圆点的active
+
+        }
+        // 右边按钮控制点到下一张
+        var goNext = function () {
+            if(index < 2){
+                index++;
+            }else {
+                index = 0;
+            }
+            goIndex();
+            time = 0;
+        }
+        rightBtn.addEventListener('click',function () {
+            goNext();
+        })
+        // 左边按钮点到上一张
+        var goPre = function () {
+            if (index == 0) {
+                index = 2;
+            }else {
+                index--;
+            }
+            goIndex();
+            time = 0;
+        }
+        leftBtn.addEventListener('click',function () {
+            goPre();
+        })
+        // 圆点控制换图
+        for(var i = 0;i < points.length;i++){
+            points[i].addEventListener('click',function () {
+                var pointIndex = this.getAttribute('data-index');
+                index = pointIndex;
+                goIndex();
+                time = 0;
+            })
+        }
+        for (var i = 0;i < leftsubnav.length;i++){
+            leftsubnav[i].addEventListener('click',function () {
+                var leftsubnavIndex = this.getAttribute('data-index');
+                index = leftsubnavIndex;
+                goIndex();
+                time = 0;
+            })
+        }
+        // 定时器实现自动轮播
+      setInterval(function () {
+            time++;
+            if (time == 40){
+                goNext();
+                time = 0;
+            }
+        },100)
+
+    </script>
+</div>
+
+<!-- 为您推荐旅游地点 -->
+<div class="recPlace-box">
+    <span class="placeTitle">
+        为您推荐
+        <hr>
+    </span>
+    <ul class="placeList">
+        <li>
+            <img src="image/大理1.jpg">
+            <p><strong>大理</strong>地处云南省西部，云贵高原上的洱海平原、苍山之麓、 洱海之滨，
+                是古代南诏国和大理国的都城。</p>
+        </li>
+        <li>
+            <img src="image/法国1.jpg">
+            <p><strong>巴黎</strong>位于法国北部巴黎盆地的中央，横跨塞纳河两岸,是法兰西共和国的首都和最大城市，
+                也是法国的政治、经济、文化和商业中心。</p>
+        </li>
+        <li>
+            <img src="image/西藏1.jpg">
+            <p><strong>西藏</strong>以其雄伟壮观、神奇瑰丽的自然风光闻名。它地域辽阔、地貌壮观、资源丰富。</p>
+        </li>
+        <li>
+            <img src="image/乌镇1.jpg">
+            <p><strong>乌镇</strong>素有“中国最后的枕水人家”之誉，是典型的中国江南水乡古镇，有“鱼米之乡、
+                丝绸之府”之称。</p>
+        </li>
+        <li>
+            <img src="image/塞尔维亚1.jpg">
+            <p><strong>塞尔维亚</strong>拥有很好的旅游基础，有各式各样风景秀丽的旅游景点，大量文化历史遗迹，
+                还有温泉，猎场等等大大小小的旅游设施。</p>
+        </li>
+        <li>
+            <img src="image/茶卡盐湖%20天空之境.jpg">
+            <p><strong>青海</strong>有动物岩画和宗教岩画、悠扬的民歌“花儿”、奔放的藏族歌舞、
+                民间佛教绘塑“热贡艺术”，藏族卷轴画“唐卡艺术”，酥油花艺术。</p>
+        </li>
+        <li>
+            <img src="image/鼓浪屿.jpg">
+            <p><strong>鼓浪屿</strong>是个宁静美丽的小岛，这里有着各种风格迥异、中西合壁的建筑，
+                汇集了各种特色的食铺和商铺，充满了文艺范儿。</p>
+        </li>
+        <li>
+            <img src="image/漠河.jpg">
+            <p><strong>漠河</strong>是中国国内唯一能够观测北极光，体验极昼、极夜的地方，拥有中国最北、
+                龙江源头、神奇天象、圣诞世界、原始石林等垄断性旅游资源。</p>
+        </li>
+    </ul>
+</div>
+<div class="placeFloat"></div>
+<!-- 广告条 -->
+<div class="banner-box">
+    <img src="image/广告条1.png">
+</div>
+<!-- 酒店推荐 -->
+<div class="recHotel-box">
+    <span>
+        酒店推荐
+        <hr>
+    </span>
+    <ul class="hotelList">
+        <li>
+          <img src="image/巴黎香格里拉大酒店01.png">
+          <p><strong>巴黎香格里拉大酒店</strong>坐拥无与伦比的艾菲尔铁塔和塞纳河风光,您可以感受到法国首都巴黎极致
+            的优雅</p>
+        </li>
+        <li>
+            <img src="image/宝格丽巴厘岛度假酒店01.png">
+            <p><strong>宝格丽巴厘岛度假酒店</strong>既吸收了巴厘岛独特的建筑风格，又延续了意大利品牌宝格丽的浪漫
+                风情</p>
+        </li>
+        <li>
+            <img src="image/杭州雅泉山庄酒店01.png">
+            <p><strong>杭州雅泉山庄酒店</strong>如同西湖边的古典行宫一般，简单却不失韵味，四院围合，随处体现着
+                都是中国美学的至高境界。</p>
+        </li>
+        <li>
+            <img src="image/圣托里尼佩里奥拉斯酒店02.png">
+            <p><strong>圣托里尼佩里奥拉斯酒店</strong>可以将爱琴海迷人的景色尽收眼底，美妙和浪漫在这里被演绎
+                得淋漓尽致。</p>
+        </li>
+        <li>
+            <img src="image/北京王府半岛酒店02.png">
+            <p><strong>北京王府半岛酒店</strong>融合了永恒的中国传统工艺、艺术元素、先进半岛科技及传统极致的半岛服务</p>
+        </li>
+
+        <li>
+            <img src="image/甲米瑞亚维德酒店01.png">
+            <p><strong>甲米瑞亚维德酒店</strong>丛林中跳跃的松鼠，围栏上休憩的猕猴，沙滩上晒太阳的蜥蜴，只要步入它，就如同置身于爱丽丝梦游仙境中的世界。</p>
+        </li>
+        <li>
+            <img src="image/普吉岛悦榕庄酒店01.png">
+            <p><strong>普吉岛悦榕庄酒店</strong>是一座被咸水湖及茂盛植被环绕的全泳池别墅的私人度假天堂、
+                是探索这个岛屿原始印记的游客最理想的目的地。</p>
+        </li>
+        <li>
+            <img src="image/西安华清御汤酒店02.png">
+            <p><strong>西安华清御汤酒店</strong>是一处集温泉水疗、沐浴养生、盛唐文化品赏于一体的高端园林式温泉酒店。</p>
+        </li>
+
+    </ul>
+</div>
+<!-- 最后的联系条 -->
+<div class="end-box">
+    <ul>
+        <li>关于ABC旅行社</li>
+        <li>联系我们</li>
+    </ul>
+</div>
+
+</body>
+</html>

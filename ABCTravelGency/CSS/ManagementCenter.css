@@ -1,0 +1,319 @@
+/* 页面初始化 */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f2f2f2;
+}
+li {            /* 去掉列表自带样式 */
+    list-style: none;
+}
+button {  /* 去掉按钮自带边框 */
+    border: none;
+}
+.title {
+    text-align: center;
+    margin-top: 15px;
+    font-family: 华文楷体;
+    font-size: 50px;
+    color: #8e89a3;
+}
+/* 管理员中心页面 */
+.perNav-box:after {   /* 清除浮动，让父级自动适应高度，从而达到隔断下边标准流以防止被重叠 */
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.perNav-box {    /* IE6、7 专有 */
+    *zoom: 1;
+}
+.perNav-box {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+}
+.perNav-left {             /* 左侧按钮盒子 */
+    position: absolute;
+    top: 100px;
+    left: 15px;
+    width: 200px;
+    height: 315px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.btnItems {                     /* 左侧按钮统一样式*/
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    margin: 30px auto;
+    text-align: center;
+    color: #b1a8b2;
+    cursor: pointer;              /* 鼠标变小手 */
+}
+.btnItems.active {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    margin: 30px auto;
+    text-align: center;
+    color: #fff;
+    background-color: #7c9ec1;
+    border-radius: 30px;
+}
+.item {                /* 右侧盒子内容统一样式 */
+    position: absolute;
+    top: 100px;
+    left: 235px;
+    width: 850px;
+    height: 900px;
+}
+.item:nth-child(1) {             /* 线路管理 */
+    position: absolute;
+    background-color: #f2f2f2;
+}
+.item:nth-child(2) {                /* 预定确认 */
+    position: absolute;
+    background-color: #f2f2f2;
+}
+.item:nth-child(3) {                /* 评价回复 */
+    position: absolute;
+    background-color: #f2f2f2;
+}
+.item:nth-child(4) {                /* 修改密码 */
+    position: absolute;
+    background-color: #f2f2f2;
+}
+.item.active {
+    z-index: 10;
+    opacity: 1;
+}
+.item hr {
+    width: 760px;
+    margin: 0 auto;
+    color: #8e89a3;
+}
+/* 线路管理 */
+td {
+    border-bottom: 1.5px solid #f1f1f1;
+    text-align: center;
+}
+.table-box {
+    width: 850px;
+    height: 370px;
+    padding-top: 50px;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.table-box table {
+    width: 750px;
+    height: 300px;
+    margin: 0 auto;
+}
+.addBtn {
+    margin-left: 620px;
+}
+/* .box-line {
+    width: 850px;
+    height: 220px;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+.box-line img {        线路管理图片
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.box-line a {       /* 线路管理链接
+    float: left;
+    margin-top: 50px;
+    margin-left: 50px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+}
+.box-line a:hover {
+    color: #3b70ca;
+} */
+/* .buttonChange {         修改按钮
+    float: left;
+    width: 80px;
+    height: 30px;
+    margin-top: 80px;
+    margin-left: 50px;
+    color: #fff;
+    background-color: #7c9ec1;
+    border-radius: 50px;
+}
+.buttonDel {         /* 删除按钮
+    float: left;
+    width: 80px;
+    height: 30px;
+    margin-top: 80px;
+    margin-left: 50px;
+    color: #fff;
+    background-color: #7c9ec1;
+    border-radius: 50px;
+} */
+
+/* 预定确认 */
+.box {
+    width: 850px;
+    height: 220px;
+    background-color: #fff;
+}
+.box img {       /* 预定确认订单图片 */
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.box a {       /* 预定确认订单链接 */
+    float: left;
+    margin-top: 30px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+}
+.box a:hover {
+    color: #3b70ca;
+}
+.box p {
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    text-align: center;
+    color: #c3c3c3;
+}
+#buttonConfirm {         /* 确认按钮 */
+    float: left;
+    width: 80px;
+    height: 30px;
+    margin-top: 80px;
+    margin-left: 50px;
+    color: #fff;
+    background-color: #7c9ec1;
+    border-radius: 50px;
+}
+/* 评价回复 */
+.eval-box {
+    width: 850px;
+    height: 500px;
+    background-color: #fff;
+}
+.eval-box img {       /* 评价回复 图片 */
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.eval-box p {
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    text-align: center;
+    color: #c3c3c3;
+}
+.eval-box a {       /* 评价回复 链接 */
+    float: left;
+    margin-top: 50px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+}
+.eval-box a:hover {
+    color: #3b70ca;
+}
+#buttoneval {         /* 评价按钮 */
+    float: left;
+    width: 60px;
+    height: 30px;
+    margin-top: 200px;
+    margin-left: 30px;
+    color: #fff;
+    background-color: #7c9ec1;
+    border-radius: 50px;
+}
+.price {                     /* 订单价格 */
+    float: right;
+    margin-top: 70px;
+    margin-right: 50px;
+    font-size: 30px;
+    color: #ff6700;
+}
+#usereval {
+    float: left;
+    margin-top: 150px;
+    margin-left: -65px;
+    color: #8e89a3;
+}
+.textEval {
+    float: left;
+    width: 500px;
+    min-height: 100px;
+    margin-top: 10px;
+    margin-left: 200px;
+    padding: 4px;
+    font-size: 14px;
+    color: #333;
+    outline:0; /* 当元素获得焦点的时候，焦点框为0.去掉虚线框（或高亮框）*/
+    border:1px solid #a0b3d6;/*设置边框1px，实线，边框线色为#a0b3d6 */
+}
+/* 当输入框为空时，显示默认文字 */
+.textEval:empty::before{
+    content:attr(placeholder); /*获取属性的值 attr（value）,可以获得属性值 */
+    color: #999;
+}
+/* 修改密码 */
+.password_box {
+    width: 850px;
+    height: 320px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background-color: #fff;
+}
+.password_title {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+#password {
+    display: block;
+    width: 250px;
+    height:30px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-left: 15px;
+    border-radius: 30px;
+    border: 1px solid #000;
+}
+#newPassword {
+    display: block;
+    width: 250px;
+    height:30px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-left: 15px;
+    border-radius: 30px;
+    border: 1px solid #8e89a3;
+}
+#confirmBtn {
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: #fff;
+    border-style: none;
+    border-radius: 30px;
+    background-color: #7c9ec1;
+    cursor: pointer;
+}
