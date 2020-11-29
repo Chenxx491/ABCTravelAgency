@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 包裹所有内容的大盒子 */
+
+.box {
+    margin-top: 60px;
+}
+
+
+/* 展示分数 */
+
+h2 {
+    text-align: center;
+}
+
+
+/* 游戏界面 */
+
+.main {
+    width: 408px;
+    height: 408px;
+    margin: 20px auto;
+    border: 2px solid gray;
+    overflow: hidden;
+}
+
+
+/* 内容盒子，存放黑白块 */
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    top: -408px;
+    border-collapse: collapse;
+}
+
+
+/* 一行黑白块 */
+
+.row {
+    width: 100%;
+    height: 100px;
+}
+
+
+/* 白块 */
+
+.column {
+    float: left;
+    width: 100px;
+    height: 100px;
+    border: 1px solid gray;
+}
+
+
+/* 黑块，给白块加上该类名就可以设置黑块 */
+
+.black {
+    background-color: #000;
+}
+
+
+/* 开始游戏按钮 */
+
+#startBtn {
+    display: block;
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}

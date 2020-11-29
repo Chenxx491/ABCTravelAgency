@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>别踩白块</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<!-- 
+    别踩白块游戏html结构：
+    用一个大盒子box将所有内容包裹
+      - h2 用于展示得分
+      - main盒子装游戏界面：
+        * main盒子里边有一个content内容盒子，给这个盒子加上定位，
+          让其top值一开始为-408px，即main盒子的高度；然后在js代码中设置这个top值以达到黑白块
+          一行行往下掉的效果。
+        * 在content盒子中，用row盒子作为行，里边存放四个column浮动的盒子作为列；
+          row和column盒子是由js动态生成
+      - 最后是一个开始游戏按钮
+
+ -->
+
+<body>
+    <div class="box">
+        <h2 id="score">0</h2>
+        <div class="main">
+            <div class="content"></div>
+        </div>
+
+        <button id="startBtn">开始游戏</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
